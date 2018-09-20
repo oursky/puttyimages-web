@@ -194,6 +194,7 @@ metadata:
   namespace: likecoin
   annotations:
     ingress.kubernetes.io/proxy-body-size: 10m
+    kubernetes.io/tls-acme: "true"
 spec:
   rules:
   - host: cdn-puttyimages.pandawork.com
@@ -214,3 +215,4 @@ spec:
   - hosts:
     - cdn-puttyimages.pandawork.com
     - puttyimages.pandawork.com
+    secretName: web-tls
